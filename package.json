@@ -51,14 +51,15 @@
     "eslint-plugin-json": "^3.0.0",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
-    "husky": "^7.0.1",
+    "husky": "4",
     "prettier": "^2.3.2",
     "prettier-eslint": "^13.0.0",
     "pretty-quick": "^3.1.1"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn prettier-format && yarn lint"
+      "pre-push": "yarn lint",
+      "pre-commit": "pretty-quick --staged"
     }
   }
 }
